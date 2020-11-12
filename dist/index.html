@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- type=importmap will be supported in the feature -->
+    <!-- <script type="importmap">
+      {
+        "imports": {
+          "react": "https://unpkg.com/react@16.14.0/umd/react.development.js",
+          "react-dom": "https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"
+        }
+      }
+    </script> -->
+    <script type="module" src="/Root.mjs"></script>
+  </body>
+  <style>
+    #root {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom: 0.5rem;
+
+      display: grid;
+      grid-template-columns: minmax(15rem, auto) 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "h-def h-shell"
+        "def shell";
+    }
+
+    .h-def {
+      grid-area: h-def;
+    }
+
+    .h-shell {
+      grid-area: h-shell;
+    }
+
+    .def-list {
+      grid-area: def;
+      resize: horizontal;
+    }
+
+    .shell {
+      grid-area: shell;
+      border: 0.125rem solid black;
+      padding: 0.25rem;
+
+      flex-grow: 1;
+      overflow: hidden;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 3rem 1fr 2rem;
+      grid-template-areas: "header" "app-list" "footer";
+    }
+
+    .header-container {
+      justify-self: stretch;
+      grid-area: header;
+
+      background-color: gray;
+    }
+
+    .footer-container {
+      justify-self: stretch;
+      grid-area: footer;
+
+      background-color: gray;
+    }
+
+    .app-list {
+      grid-area: app-list;
+      justify-self: stretch;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: scroll;
+    }
+    .app-list > * {
+      min-width: 10rem;
+      min-height: 10rem;
+
+      max-width: 10rem;
+      max-height: 10rem;
+
+      background-color: lightgrey;
+      margin: 0.5rem;
+    }
+  </style>
+</html>

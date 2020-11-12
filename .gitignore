@@ -80,7 +80,7 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/**/*
 
 # Gatsby files
 .cache/
@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Build
+!dist/index.html

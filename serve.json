@@ -1,0 +1,7 @@
+{
+  "public": "./",
+  "rewrites": [
+    { "source": "/app/:res", "destination": "/app/:res" },
+    { "source": "/:res", "destination": "/shell/:res" }
+  ]
+}
