@@ -62,9 +62,10 @@ const svcDef = createSvcDef("app", {
     factory: function ({ header }) {
         const H = header === null || header === void 0 ? void 0 : header[0];
         return function AppTow() {
-            return React.createElement("div", null,
-                "Current header is ",
-                H ? React.createElement(H, null) : null);
+            return (React.createElement("div", null,
+                "This app consumes the header plugin. Current header is: ",
+                React.createElement("br", null),
+                H ? React.createElement(H, null) : null));
         };
     },
 });
