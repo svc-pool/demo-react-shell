@@ -11,7 +11,12 @@ const svcDef = createSvcDef<Registry>("app", {
     const H = header?.[0];
 
     return function AppTow() {
-      return <div>Current header is {H ? <H /> : null}</div>;
+      return (
+        <div>
+          This app consumes the header plugin. Current header is: <br />
+          {H ? <H /> : null}
+        </div>
+      );
     };
   },
 });
