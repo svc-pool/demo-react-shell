@@ -57,7 +57,7 @@ function createSvcDef(point, defOrFactory) {
 
 const svcDef = createSvcDef("app", function () {
     return function AppOne() {
-        return (React.createElement("a", { href: "https://github.com/svc-pool/react-plugin-template" }, "Add your plugin to this demo"));
+        return (React.createElement("a", { target: "_blank", href: "https://github.com/svc-pool/react-plugin-template" }, "Add your plugin to this demo"));
     };
 });
 
