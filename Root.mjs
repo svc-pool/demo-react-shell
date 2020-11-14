@@ -333,7 +333,7 @@ function FooterContainer() {
     return (React.createElement("div", { className: "footer-container" }, footers.length ? (footers.map((F, i) => React.createElement(F, { key: i }))) : (React.createElement("div", null, "no footer"))));
 }
 
-const DefaultPlugins = ["/Header.mjs", "/AppOne.mjs", "/AppTwo.mjs"];
+const DefaultPlugins = ["./Header.mjs", "./AppOne.mjs", "./AppTwo.mjs"];
 function Root() {
     const [pluginsPath, setState] = React.useState(DefaultPlugins);
     return (React.createElement(React.Fragment, null,
