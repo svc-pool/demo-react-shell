@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import DefList from "./DefList";
 import Shell from "./Shell";
 
-const DefaultPlugins = ["/Header.mjs", "/AppOne.mjs", "/AppTwo.mjs"];
+const DefaultPlugins = ["./Header.mjs", "./AppOne.mjs", "./AppTwo.mjs"];
 
 function Root() {
   const [pluginsPath, setState] = React.useState<string[]>(DefaultPlugins);
