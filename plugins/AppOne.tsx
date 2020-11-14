@@ -6,7 +6,10 @@ import Registry from "../root/Registry";
 const svcDef = createSvcDef<Registry>("app", function () {
   return function AppOne() {
     return (
-      <a href="https://github.com/svc-pool/react-plugin-template">
+      <a
+        target="_blank"
+        href="https://github.com/svc-pool/react-plugin-template"
+      >
         Add your plugin to this demo
       </a>
     );
